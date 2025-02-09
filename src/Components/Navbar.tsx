@@ -1,209 +1,191 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // Icons for mobile menu
 import logo from "../assets/logo.svg";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleDropdown = (menu: string) =>
-    setDropdownOpen(dropdownOpen === menu ? null : menu);
-
   return (
-    <nav className="w-full bg-base-200 border-b border-gray-200 px-6 lg:px-16 py-4 flex items-center justify-between">
-      {/* Left - Logo */}
-      <div className="flex items-center space-x-6">
-        <img src={logo} alt="Postie Logo" className="h-8" />
-      </div>
-
-      {/* Mobile Menu Toggle */}
-      <button className="lg:hidden" onClick={toggleMenu}>
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-
-      {/* Desktop Menu */}
-      <ul className="hidden lg:flex space-x-8 text-[#1E2A3A] font-medium">
-        {["We Help With", "Capabilities", "Company"].map((menu) => (
-          <li key={menu} className="relative group">
-            <button
-              className="cursor-pointer focus:outline-none"
-              onClick={() => toggleDropdown(menu)}
+    <nav className="navbar bg-base-200 px-4">
+      {/* Left: Logo & Mobile Menu */}
+      <div className="navbar-start">
+        <div className="dropdown">
+          <button tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              {menu} ▾
-            </button>
-            <ul
-              className={`absolute hidden group-hover:block bg-white shadow-md rounded-md p-2 space-y-2 mt-2 w-48 ${
-                dropdownOpen === menu ? "block" : "hidden"
-              }`}
-            >
-              {menu === "We Help With" && (
-                <>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Prospecting
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Retargeting
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      CRM Reengagement
-                    </Link>
-                  </li>
-                </>
-              )}
-              {menu === "Capabilities" && (
-                <>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Targeting
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Execution
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Measurement
-                    </Link>
-                  </li>
-                </>
-              )}
-              {menu === "Company" && (
-                <>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                      Contact Us
-                    </Link>
-                  </li>
-                </>
-              )}
-            </ul>
-          </li>
-        ))}
-        <li>
-          <Link to="#" className="text-base-500">
-            Learn
-          </Link>
-        </li>
-      </ul>
-
-      {/* Right - Login & Button (Desktop) */}
-      <div className="hidden lg:flex items-center space-x-6">
-        <Link to="#" className="font-medium hover:text-[#00C4FF]">
-          Login
-        </Link>
-        <Link
-          to="#"
-          className="bg-[#00C4FF] text-white font-medium px-6 py-2 rounded-full shadow-md hover:bg-[#009ACD] transition"
-        >
-          Get Postie
-        </Link>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-base-200 shadow-md lg:hidden">
-          <ul className="flex flex-col space-y-4 p-6 text-[#1E2A3A] font-medium">
-            {["We Help With", "Capabilities", "Company"].map((menu) => (
-              <li key={menu}>
-                <button
-                  className="flex justify-between w-full focus:outline-none"
-                  onClick={() => toggleDropdown(menu)}
-                >
-                  {menu} ▾
-                </button>
-                {dropdownOpen === menu && (
-                  <ul className="mt-2 space-y-2">
-                    {menu === "We Help With" && (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </button>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-10"
+          >
+            {/* Mobile Menu Links */}
+            <Link to="/" className="hover:text-[#00C4FF]">
+              Home
+            </Link>
+            {["We Help With", "Capabilities", "Company"].map((title, index) => (
+              <li key={index}>
+                <details>
+                  <summary>{title}</summary>
+                  <ul className="p-2">
+                    {title === "We Help With" && (
                       <>
-                        <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                            Prospecting
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                            Retargeting
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                            CRM Reengagement
-                          </Link>
-                        </li>
+                       <li>
+                        <Link to="/wehelpwith/prospecting" className="hover:text-[#00C4FF]">
+                        Prospecting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/wehelpwith/retargeting" className="hover:text-[#00C4FF]">
+                        Retargeting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/wehelpwith/rcm-reengagement" className="hover:text-[#00C4FF]">
+                        CRM Reengagement
+                        </Link>
+                      </li>     
                       </>
                     )}
-                    {menu === "Capabilities" && (
+                    {title === "Capabilities" && (
                       <>
-                        <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                            Targeting
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                            Execution
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
-                            Measurement
-                          </Link>
-                        </li>
+                       <li>
+                        <Link to="/capabilities/targeting" className="hover:text-[#00C4FF]">
+                        Targeting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/capabilities/execution" className="hover:text-[#00C4FF]">
+                        Execution
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/capabilities/measurement" className="hover:text-[#00C4FF]">
+                        Measurement
+                        </Link>
+                      </li>
                       </>
                     )}
-                    {menu === "Company" && (
+                    {title === "Company" && (
                       <>
                         <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
+                          <Link to="/company/about-us" className="hover:text-[#00C4FF]">
                             About Us
                           </Link>
                         </li>
                         <li>
-                          <Link to="#" className="block px-4 py-2 hover:bg-gray-100">
+                          <Link to="/company/contact-us" className="hover:text-[#00C4FF]">
                             Contact Us
                           </Link>
                         </li>
                       </>
                     )}
                   </ul>
-                )}
+                </details>
               </li>
             ))}
-            <li>
-              <Link to="#" className="font-medium text-green-500 hover:text-[#00C4FF]">
-                Learn
-              </Link>
-            </li>
-            <li>
-              <Link to="#" className="font-medium hover:text-[#00C4FF]">
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="#"
-                className="bg-[#00C4FF] text-white font-medium px-6 py-2 rounded-full shadow-md transition w-full text-center"
-              >
-                Get Postie
-              </Link>
-            </li>
+            <Link to="/learn" className="hover:text-[#00C4FF]">
+              Learn
+            </Link>
           </ul>
         </div>
-      )}
+        <Link to="/">
+          <img src={logo} alt="Logo" className="h-10" />
+        </Link>
+      </div>
+
+      {/* Center: Desktop Menu */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <Link to="/" className="hover:text-[#00C4FF]">
+              Home
+            </Link>
+          </li>
+          {["We Help With", "Capabilities", "Company"].map((title, index) => (
+            <li key={index}>
+              <details>
+                <summary>{title}</summary>
+                <ul className="p-2">
+                  {title === "We Help With" && (
+                    <>
+                    <li>
+                        <Link to="/wehelpwith/prospecting" className="hover:text-[#00C4FF]">
+                        Prospecting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/wehelpwith/retargeting" className="hover:text-[#00C4FF]">
+                        Retargeting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/rcm-reengagement" className="hover:text-[#00C4FF]">
+                        CRM Reengagement
+                        </Link>
+                      </li>                      
+                    </>
+                  )}
+                  {title === "Capabilities" && (
+                    <>
+                      <li>
+                        <Link to="/capabilities/targeting" className="hover:text-[#00C4FF]">
+                        Targeting
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/capabilities/execution" className="hover:text-[#00C4FF]">
+                        Execution
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/capabilities/measurement" className="hover:text-[#00C4FF]">
+                        Measurement
+                        </Link>
+                      </li>
+                    </>
+                  )}
+                  {title === "Company" && (
+                    <>
+                      <li>
+                        <Link to="/company/about-us" className="hover:text-[#00C4FF]">
+                          About Us
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/company/contact-us" className="hover:text-[#00C4FF]">
+                          Contact Us
+                        </Link>
+                      </li>
+                    </>
+                  )}
+                </ul>
+              </details>
+            </li>
+          ))}
+          <li>
+            <Link to="/learn" className="hover:text-[#00C4FF]">
+              Learn
+            </Link>
+          </li>
+        </ul>
+      </div>
+
+      {/* Right: Buttons */}
+      <div className="navbar-end">
+        <Link to="login" className="font-medium hover:text-[#00C4FF] mr-4">
+          Login
+        </Link>
+        <Link
+          to="#"
+          className="bg-[#00C4FF] text-white font-medium px-6 py-2 rounded-full  text-center"
+        >
+          Get Postie
+        </Link>
+      </div>
     </nav>
   );
 };
