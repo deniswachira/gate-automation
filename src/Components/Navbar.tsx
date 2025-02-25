@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo/gate-automationNoBg.svg";
 
 const Navbar = () => {
   return (
@@ -26,7 +26,22 @@ const Navbar = () => {
             <Link to="/" className="hover:text-[#00C4FF]">
               Home
             </Link>
-            {["We Help With", "Capabilities", "Company"].map((title, index) => (
+            <Link to="/services" className="hover:text-[#00C4FF]">
+              Services
+            </Link>
+            <Link to="/why-gate" className="hover:text-[#00C4FF]">
+              Why Gate
+            </Link>
+            <Link to="/solutions" className="hover:text-[#00C4FF]">
+              Solutions
+            </Link>
+            <Link to="/pricing" className="hover:text-[#00C4FF]">
+              Pricing
+            </Link>
+            <Link to="/about-us" className="hover:text-[#00C4FF]">
+              About Us
+            </Link>
+            {/* {["We Help With", "Capabilities", "Company"].map((title, index) => (
               <li key={index}>
                 <details>
                   <summary>{title}</summary>
@@ -34,17 +49,17 @@ const Navbar = () => {
                     {title === "We Help With" && (
                       <>
                        <li>
-                        <Link to="/wehelpwith/prospecting" className="hover:text-[#00C4FF]">
+                        <Link to="/we-help-with/prospecting" className="hover:text-[#00C4FF]">
                         Prospecting
                         </Link>
                       </li>
                       <li>
-                        <Link to="/wehelpwith/retargeting" className="hover:text-[#00C4FF]">
+                        <Link to="/we-help-with/retargeting" className="hover:text-[#00C4FF]">
                         Retargeting
                         </Link>
                       </li>
                       <li>
-                        <Link to="/wehelpwith/rcm-reengagement" className="hover:text-[#00C4FF]">
+                        <Link to="/we-help-with/crm-reengagement" className="hover:text-[#00C4FF]">
                         CRM Reengagement
                         </Link>
                       </li>     
@@ -86,26 +101,52 @@ const Navbar = () => {
                   </ul>
                 </details>
               </li>
-            ))}
+            ))} */}
             <Link to="/learn" className="hover:text-[#00C4FF]">
               Learn
             </Link>
           </ul>
         </div>
         <Link to="/">
-          <img src={logo} alt="Logo" className="h-10" />
+          <img src={logo} alt="Logo" className="h-15 " />
         </Link>
       </div>
 
       {/* Center: Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
+        <ul className="menu menu-horizontal px-1 text-lg">
+          <li >
             <Link to="/" className="hover:text-[#00C4FF]">
               Home
             </Link>
           </li>
-          {["We Help With", "Capabilities", "Company"].map((title, index) => (
+          <li>
+          <Link to="/services" className="hover:text-[#00C4FF]">
+              Services
+            </Link>
+          </li>
+          <li>
+          <Link to="/why-gate" className="hover:text-[#00C4FF]">
+              Why Gate
+            </Link>
+          </li>
+          <li>
+          <Link to="/solutions" className="hover:text-[#00C4FF]">
+              Solutions
+            </Link>
+          </li>
+          <li>
+          <Link to="/pricing" className="hover:text-[#00C4FF]">
+              Pricing
+            </Link>
+          </li>
+          <li>
+          <Link to="/about-us" className="hover:text-[#00C4FF]">
+              About Us
+            </Link>
+          </li>
+          
+          {/* {["We Help With", "Capabilities", "Company"].map((title, index) => (
             <li key={index}>
               <details>
                 <summary>{title}</summary>
@@ -113,17 +154,17 @@ const Navbar = () => {
                   {title === "We Help With" && (
                     <>
                     <li>
-                        <Link to="/wehelpwith/prospecting" className="hover:text-[#00C4FF]">
+                        <Link to="/we-help-with/prospecting" className="hover:text-[#00C4FF]">
                         Prospecting
                         </Link>
                       </li>
                       <li>
-                        <Link to="/wehelpwith/retargeting" className="hover:text-[#00C4FF]">
+                        <Link to="/we-help-with/retargeting" className="hover:text-[#00C4FF]">
                         Retargeting
                         </Link>
                       </li>
                       <li>
-                        <Link to="/rcm-reengagement" className="hover:text-[#00C4FF]">
+                        <Link to="/we-help-with/crm-reengagement" className="hover:text-[#00C4FF]">
                         CRM Reengagement
                         </Link>
                       </li>                      
@@ -165,7 +206,7 @@ const Navbar = () => {
                 </ul>
               </details>
             </li>
-          ))}
+          ))} */}
           <li>
             <Link to="/learn" className="hover:text-[#00C4FF]">
               Learn
@@ -176,11 +217,11 @@ const Navbar = () => {
 
       {/* Right: Buttons */}
       <div className="navbar-end">
-        <Link to="login" className="font-medium hover:text-[#00C4FF] mr-4">
+        {/* <Link to="login" className="font-medium hover:text-[#00C4FF] mr-4">
           Login
-        </Link>
+        </Link> */}
         <Link
-          to="#"
+          to="get-postie"
           className="bg-[#00C4FF] text-white font-medium px-6 py-2 rounded-full  text-center"
         >
           Get Postie

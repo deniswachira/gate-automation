@@ -1,0 +1,113 @@
+// src/data/businessProcessData.ts
+import WeHelpWithImage2 from "../assets/WeHelpWithImage2.png";
+
+export const businessProcessData = [
+  {
+    id: "01",
+    title: "Business Process Automation",
+    description: "Streamline Every Workflow in Your Business. Automate task management, approvals, and workflows across departments.",
+    useCases: [
+      "Reduce human errors with AI-driven decision-making",
+      "Eliminate bottlenecks in operations, sales, and finance",
+      "Optimize team productivity with automated task tracking",
+    ],
+    button1Text: "Get Started with Process Automation",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+  },
+  {
+    id: "02",
+    title: "AI-Powered Workflow Automation",
+    description: "Automate Repetitive Workflows with AI. Free up your team for high-impact work.",
+    useCases: [
+      "Auto-trigger actions based on conditions & user interactions",
+      "AI-driven decision-making to improve efficiency",
+      "Seamlessly integrate with Zapier, Make, and Monday",
+    ],
+    button1Text: "Optimize Your Workflows",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+    reverse: true,
+  },
+  {
+    id: "03",
+    title: "CRM & Lead Management Automation",
+    description: "Turn Leads into Customers Effortlessly. Automate CRM Updates & Follow-Ups – Never miss a deal again.",
+    useCases: [
+      "Auto-sync contacts between Zoho, Monday, and Tape App",
+      "Automated lead scoring to focus on high-value prospects",
+      "Instant lead assignments to the right team members",
+    ],
+    button1Text: "Boost Sales with Smart CRM Automation",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+  },
+  {
+    id: "04",
+    title: "Marketing & Email Automation",
+    description: "Convert More Customers with AI-Driven Marketing. Send the Right Message at the Right Time – No manual work needed.",
+    useCases: [
+      "Automated email sequences for lead nurturing",
+      "Personalized campaigns using AI segmentation",
+      "Seamless integrations with Podia, Zapier & Make",
+    ],
+    button1Text: "Supercharge Your Marketing",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+    reverse: true,
+  },
+  {
+    id: "05",
+    title: "Finance & Accounting Automation",
+    description: "Eliminate Manual Spreadsheets & Financial Guesswork. Save hours on invoicing, payments, and reconciliations.",
+    useCases: [
+      "Automate invoice generation & payment reminders",
+      "Sync financial data across platforms in real time",
+      "AI-powered financial reporting for better decision-making",
+    ],
+    button1Text: "Streamline Your Finances",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+  },
+  {
+    id: "06",
+    title: "Project & Task Management Automation",
+    description: "Automate Workflows & Keep Projects Moving. No more status meetings—automate progress tracking.",
+    useCases: [
+      "Auto-assign tasks based on project milestones",
+      "Real-time updates & notifications to keep teams aligned",
+      "Integrate seamlessly with Monday, Zoho, and Tape App",
+    ],
+    button1Text: "Make Project Management Effortless",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+    reverse: true,
+  },
+  {
+    id: "07",
+    title: "Customer Support & Service Automation",
+    description: "Provide Instant, AI-Driven Customer Support. Automate Responses & Ticketing – Reduce support delays.",
+    useCases: [
+      "AI-powered chatbots for instant customer responses",
+      "Automated ticket routing for faster issue resolution",
+      "Seamless CRM integration to track & follow up",
+    ],
+    button1Text: "Upgrade Your Customer Support",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+  },
+  {
+    id: "08",
+    title: "Custom AI & No-Code Automation Solutions",
+    description: "Your Business. Your Rules. Your Automation.",
+    useCases: [
+      "100% customizable workflows to fit your exact needs",
+      "No-code automation builder – anyone can create workflows",
+      "AI-driven insights to optimize efficiency",
+    ],
+    button1Text: "Let’s Build Your Custom Automation",
+    button1Link: "#",
+    imageUrl: WeHelpWithImage2,
+    reverse: true,
+  },
+];
