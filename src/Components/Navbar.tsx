@@ -38,72 +38,14 @@ const Navbar = () => {
             <Link to="/pricing" className="hover:text-[#00C4FF]">
               Pricing
             </Link>
+            <Link to="/learn" className="hover:text-[#00C4FF]">
+              Blogs
+            </Link>
+            <Link to="/videos" className="hover:text-[#00C4FF]">
+              Videos
+            </Link>
             <Link to="/about-us" className="hover:text-[#00C4FF]">
               About Us
-            </Link>
-            {/* {["We Help With", "Capabilities", "Company"].map((title, index) => (
-              <li key={index}>
-                <details>
-                  <summary>{title}</summary>
-                  <ul className="p-2">
-                    {title === "We Help With" && (
-                      <>
-                       <li>
-                        <Link to="/we-help-with/prospecting" className="hover:text-[#00C4FF]">
-                        Prospecting
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/we-help-with/retargeting" className="hover:text-[#00C4FF]">
-                        Retargeting
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/we-help-with/crm-reengagement" className="hover:text-[#00C4FF]">
-                        CRM Reengagement
-                        </Link>
-                      </li>     
-                      </>
-                    )}
-                    {title === "Capabilities" && (
-                      <>
-                       <li>
-                        <Link to="/capabilities/targeting" className="hover:text-[#00C4FF]">
-                        Targeting
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/capabilities/execution" className="hover:text-[#00C4FF]">
-                        Execution
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/capabilities/measurement" className="hover:text-[#00C4FF]">
-                        Measurement
-                        </Link>
-                      </li>
-                      </>
-                    )}
-                    {title === "Company" && (
-                      <>
-                        <li>
-                          <Link to="/company/about-us" className="hover:text-[#00C4FF]">
-                            About Us
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/company/contact-us" className="hover:text-[#00C4FF]">
-                            Contact Us
-                          </Link>
-                        </li>
-                      </>
-                    )}
-                  </ul>
-                </details>
-              </li>
-            ))} */}
-            <Link to="/learn" className="hover:text-[#00C4FF]">
-              Learn
             </Link>
           </ul>
         </div>
@@ -121,95 +63,38 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-          <Link to="/services" className="hover:text-[#00C4FF]">
+            <Link to="/services" className="hover:text-[#00C4FF]">
               Services
             </Link>
           </li>
           <li>
-          <Link to="/why-gate" className="hover:text-[#00C4FF]">
+            <Link to="/why-gate" className="hover:text-[#00C4FF]">
               Why Gate
             </Link>
           </li>
           <li>
-          <Link to="/solutions" className="hover:text-[#00C4FF]">
+            <Link to="/solutions" className="hover:text-[#00C4FF]">
               Solutions
             </Link>
           </li>
           <li>
-          <Link to="/pricing" className="hover:text-[#00C4FF]">
+            <Link to="/pricing" className="hover:text-[#00C4FF]">
               Pricing
             </Link>
           </li>
           <li>
-          <Link to="/about-us" className="hover:text-[#00C4FF]">
-              About Us
+            <Link to="/learn" className="hover:text-[#00C4FF]">
+              Blogs
             </Link>
           </li>
-          
-          {/* {["We Help With", "Capabilities", "Company"].map((title, index) => (
-            <li key={index}>
-              <details>
-                <summary>{title}</summary>
-                <ul className="p-2">
-                  {title === "We Help With" && (
-                    <>
-                    <li>
-                        <Link to="/we-help-with/prospecting" className="hover:text-[#00C4FF]">
-                        Prospecting
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/we-help-with/retargeting" className="hover:text-[#00C4FF]">
-                        Retargeting
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/we-help-with/crm-reengagement" className="hover:text-[#00C4FF]">
-                        CRM Reengagement
-                        </Link>
-                      </li>                      
-                    </>
-                  )}
-                  {title === "Capabilities" && (
-                    <>
-                      <li>
-                        <Link to="/capabilities/targeting" className="hover:text-[#00C4FF]">
-                        Targeting
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/capabilities/execution" className="hover:text-[#00C4FF]">
-                        Execution
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/capabilities/measurement" className="hover:text-[#00C4FF]">
-                        Measurement
-                        </Link>
-                      </li>
-                    </>
-                  )}
-                  {title === "Company" && (
-                    <>
-                      <li>
-                        <Link to="/company/about-us" className="hover:text-[#00C4FF]">
-                          About Us
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/company/contact-us" className="hover:text-[#00C4FF]">
-                          Contact Us
-                        </Link>
-                      </li>
-                    </>
-                  )}
-                </ul>
-              </details>
-            </li>
-          ))} */}
           <li>
-            <Link to="/learn" className="hover:text-[#00C4FF]">
-              Learn
+            <Link to="/videos" className="hover:text-[#00C4FF]">
+              Videos
+            </Link>
+          </li>
+          <li>
+            <Link to="/about-us" className="hover:text-[#00C4FF]">
+              About Us
             </Link>
           </li>
         </ul>
@@ -221,10 +106,10 @@ const Navbar = () => {
           Login
         </Link> */}
         <Link
-          to="get-postie"
+          to="get-in-touch"
           className="bg-[#00C4FF] text-white font-medium px-6 py-2 rounded-full  text-center"
         >
-          Get Postie
+          Get In Touch
         </Link>
       </div>
     </nav>

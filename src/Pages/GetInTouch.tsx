@@ -1,9 +1,9 @@
 import Container from "../Components/Container";
-import { DigitalCompanies } from "../Components/DigitalCompanies";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import emmah from "../assets/Emmah.png"
 
-const GetPostie = () => {
+const GetInTouch = () => {
     return (
         <Container className="flex flex-col gap-6">
             <Navbar />
@@ -136,14 +136,14 @@ const GetPostie = () => {
                             {/* Testimonial 1 */}
                             <div className="bg-gray-100 p-6 rounded-md shadow-sm">
                                 <p className="text-gray-700">
-                                    Postie has enabled us to launch and scale a new growth channel
+                                    Gate Automation has enabled us to launch and scale a new growth channel
                                     with analytics to back it. The team at Postie has been
                                     incredibly helpful in offering insights, reporting, and tests
                                     to enable us to grow this channel.
                                 </p>
                                 <div className="flex items-center mt-4">
                                     <img
-                                        src="https://via.placeholder.com/40"
+                                        src={emmah}
                                         alt="Emma"
                                         className="w-10 h-10 rounded-full mr-3"
                                     />
@@ -159,14 +159,14 @@ const GetPostie = () => {
                             {/* Testimonial 2 */}
                             <div className="bg-gray-100 p-6 rounded-md shadow-sm">
                                 <p className="text-gray-700">
-                                    Postie’s approach to direct marketing was a game changer for
+                                    Gate Automation's approach to direct marketing was a game changer for
                                     us. Their ability to merge a digital-first approach to
                                     targeting and the speed and agility of real-time execution has
                                     been very powerful.
                                 </p>
                                 <div className="flex items-center mt-4">
                                     <img
-                                        src="https://via.placeholder.com/40"
+                                        src={emmah}
                                         alt="Doug"
                                         className="w-10 h-10 rounded-full mr-3"
                                     />
@@ -182,10 +182,9 @@ const GetPostie = () => {
                     </div>
                 </div>
             </section>
-            <DigitalCompanies />
             <Footer />
         </Container>
     );
 };
 
-export default GetPostie;
+export default GetInTouch;

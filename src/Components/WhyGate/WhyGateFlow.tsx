@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import WhyGateSection from "../WhyGateSection";
+import WhyGateSection from "./WhyGateSection";
 import HiddenCostImage from "../../assets/dish.png";
 import AIAutomationImage from "../../assets/WeHelpWithHeroImage.png";
 

@@ -66,7 +66,7 @@ export default function Hero() {
             transition={{ duration: 0.3 }}
           >
             <Link
-              to="get-postie"
+              to="get-in-touch"
               className="mt-10 px-6 py-3 text-lg font-semibold bg-[#00C4FF] rounded-full shadow-md transition-all hover:shadow-lg"
             >
               Get Started Today 🚀

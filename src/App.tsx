@@ -5,16 +5,13 @@ import Login from './Pages/Login';
 import Error from './Pages/Error';
 import Learn from './Pages/Learn';
 import BlogDetail from './Pages/BlogDetails';
-import Capabilities from './Pages/CapabilitiesTargeting';
-import CapabilitiesMeasurement from './Pages/CapabilitiesMeasurement';
-import CapabilitiesExecution from './Pages/CapabilitiesExecution';
-import GetPostie from './Pages/GetPostie';
-import WeHelpWithProspecting from './Pages/WeHelpWithProspecting';
-import WeHelpWithRetargeting from './Pages/WeHelpWithRetargeting';
-import WeHelpWithReengagement from './Pages/WeHelpWithReengagement';
 import Services from './Pages/Services';
 import WhyGate from './Pages/WhyGate';
 import Solutions from './Pages/Solutions';
+import Pricing from './Pages/Pricing';
+import AboutUs from './Pages/AboutUs';
+import GetInTouch from './Pages/GetInTouch';
+import Videos from './Pages/Videos';
 
 const router = createBrowserRouter([
   {
@@ -28,8 +25,8 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: 'get-postie',
-    element: <GetPostie />,
+    path: 'get-in-touch',
+    element: <GetInTouch />,
     errorElement: <Error />,
   },
   {
@@ -48,43 +45,28 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   {
+    path: 'pricing',
+    element: <Pricing />,
+    errorElement: <Error />,
+  },
+  {
+    path: 'about-us',
+    element: <AboutUs />,
+    errorElement: <Error />,
+  },
+  {
     path: 'learn',
     element: <Learn />,
     errorElement: <Error />,
   },
   {
+    path: 'videos',
+    element: <Videos />,
+    errorElement: <Error />,
+  },
+  {
     path: 'blog-details/:id',
     element: <BlogDetail />,
-    errorElement: <Error />,
-  },
-  {
-    path:'capabilities/targeting',
-    element: <Capabilities />,
-    errorElement: <Error />,
-  },
-  {
-    path:'capabilities/execution',
-    element: <CapabilitiesExecution />,
-    errorElement: <Error />,
-  },
-  {
-    path:'capabilities/measurement',
-    element: <CapabilitiesMeasurement />,
-    errorElement: <Error />,
-  },
-  {
-    path:'we-help-with/prospecting',
-    element: <WeHelpWithProspecting />,
-    errorElement: <Error />,
-  },
-  {
-    path:'we-help-with/retargeting',
-    element: <WeHelpWithRetargeting />,
-    errorElement: <Error />,
-  },
-  {
-    path:'we-help-with/crm-reengagement',
-    element: <WeHelpWithReengagement />,
     errorElement: <Error />,
   }
 ])

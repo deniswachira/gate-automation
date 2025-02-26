@@ -20,7 +20,7 @@ export default function PricingHero() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center py-16 px-6">
+    <section className="flex justify-center items-center py-16 px-6 bg-[#003F64] text-white">
       <div className="grid md:grid-cols-2 items-center gap-10 max-w-6xl">
         {/* Left: Text Section */}
         <motion.div
@@ -29,47 +29,49 @@ export default function PricingHero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Main Title with Fade-in Animation */}
+          {/* Main Title */}
           <motion.h1
-            className="text-4xl font-bold text-[#003F64] leading-tight"
+            className="text-4xl font-bold leading-tight"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            Work Smarter, Scale Faster. Automate Everything.
+            Flexible Plans to Fit Your Needs
           </motion.h1>
 
+          {/* Subtitle */}
+          <p className="text-lg mt-3 text-gray-200">
+            Whether you’re a small business, a growing enterprise, or a large organization, 
+            <strong> Gate Automation</strong> offers AI-driven automation solutions that scale with you. 
+            No hidden fees. No long-term contracts. Just seamless automation.
+          </p>
+
           {/* Dynamic Changing Text */}
-          <div className="relative overflow-hidden h-14 w-fit mt-3">
+          <div className="relative overflow-hidden h-14 w-fit mt-4">
             <motion.h1
               key={index}
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="text-xl font-bold text-white bg-[#003F64] px-4 py-1 rounded-md inline-block shadow-lg"
+              className="text-xl font-semibold bg-[#00C4FF] text-[#003F64] px-4 py-2 rounded-md inline-block shadow-lg"
             >
               {textOptions[index]}
             </motion.h1>
           </div>
 
-          {/* Description */}
-          <p className="text-2xl font-semibold text-[#003F64] mt-2 mb-7">
-            Your business is losing <strong>1000+ hours</strong> yearly on manual workflows, disconnected systems, and
-            repetitive tasks. It's time to eliminate inefficiencies and focus on growth with AI-powered automation.
-          </p>
-
-          {/* CTA Button with Hover Animation */}
+          {/* CTA Button */}
           <motion.div
+            className="mt-6"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.3 }}
           >
             <Link
-              to="get-postie"
-              className="mt-10 px-6 py-3 text-lg font-semibold bg-[#00C4FF] rounded-full shadow-md transition-all hover:shadow-lg"
+              to="/pricing"
+              className="px-6 py-3 text-lg font-semibold bg-[#00C4FF] text-[#003F64] rounded-full shadow-md transition-all hover:shadow-lg"
             >
-              Get Started Today 🚀
+              📢 Start Automating Today →
             </Link>
           </motion.div>
         </motion.div>
@@ -80,9 +82,9 @@ export default function PricingHero() {
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img src={heroImg} className="max-w-sm rounded-lg drop-shadow-lg" alt="Hero" />
+          <img src={heroImg} className="max-w-sm rounded-lg drop-shadow-lg" alt="Automation" />
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

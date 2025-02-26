@@ -2,19 +2,16 @@
 import Container from "../Components/Container"
 import Footer from "../Components/Footer"
 import Navbar from "../Components/Navbar"
-import PricingHero from "../Components/Pricing/PricingHero"
-import PricingModels from "../Components/Pricing/PricingModels"
 
-const Pricing = () => {
+const Videos = () => {
   return (
       <Container className="flex flex-col gap-6">
         <Navbar />
-        <PricingHero />
-        <PricingModels/>
+        <h1>Coming Soon🥳🥳🥳</h1>
         <Footer />
       </Container>    
   )
 }
 
-export default Pricing
+export default Videos
 
