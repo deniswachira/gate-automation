@@ -14,7 +14,7 @@ const pricingPlans = [
       "✅ Basic support",
     ],
     buttonText: "Get Started →",
-    buttonLink: "/get-started",
+    buttonLink: "/get-in-touch",
   },
   {
     name: "Growth",
@@ -28,7 +28,7 @@ const pricingPlans = [
       "✅ Priority support",
     ],
     buttonText: "Scale Your Automation →",
-    buttonLink: "/pricing",
+    buttonLink: "/get-in-touch",
     highlight: true, // Special highlight for the most popular plan
   },
   {
@@ -42,7 +42,7 @@ const pricingPlans = [
       "✅ Dedicated account manager & 24/7 support",
     ],
     buttonText: "Talk to an Expert →",
-    buttonLink: "/contact",
+    buttonLink: "/get-in-touch",
   },
 ];
 
