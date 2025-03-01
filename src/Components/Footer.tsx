@@ -48,7 +48,7 @@ const Footer = () => {
             <a href="#" className="hover:text-[#00C4FF] transition duration-300">About Us</a>
           </div>
           <div className="flex flex-col gap-2">
-            <a href="#" className="font-semibold hover:text-[#00C4FF] transition duration-300">Get Postie</a>
+            <a href="#" className="font-semibold hover:text-[#00C4FF] transition duration-300">Pricing</a>
           </div>
         </motion.div>
       </div>

@@ -7,7 +7,7 @@ const PerformanceBanner = () => {
         <h2 className="text-xl md:text-2xl font-bold mt-2 mb-4">
           Discover how Gate Automation can help your business automate smarter 
         </h2>
-        <Link to="#" className="bg-[#00C4FF] text-white text-xl font-medium px-6 py-2 rounded-full shadow-md  transition">
+        <Link to="/get-in-touch" className="bg-[#00C4FF] text-white text-xl font-medium px-6 py-2 rounded-full shadow-md  transition">
           Book A demo
         </Link>
       </div>

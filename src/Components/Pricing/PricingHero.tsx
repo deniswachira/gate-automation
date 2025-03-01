@@ -10,6 +10,7 @@ export default function PricingHero() {
     "Automate repetitive tasks & scale your business",
   ];
   const [index, setIndex] = useState(0);
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
