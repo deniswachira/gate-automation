@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle } from "lucide-react";
 import home from "../../assets/home.png";
+import { Link } from "react-router-dom";
 
 const WhyAutomate = () => {
   const sectionRef = useRef(null);
@@ -10,11 +11,11 @@ const WhyAutomate = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col items-center justify-center px-6 md:px-20 py-16 bg-[#003F64]"
+      className="flex flex-col items-center justify-center px-6 md:px-32 py-8"
     >
-      {/* H1 Title at the Top */}
+      {/* Title */}
       <motion.h1
-        className="text-3xl md:text-4xl font-bold text-white text-center mb-10"
+        className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12 leading-snug font-[\'Maven Pro\']"
         initial={{ opacity: 0, y: -20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -22,9 +23,9 @@ const WhyAutomate = () => {
         Why Automate?
       </motion.h1>
 
-      {/* Content Container */}
-      <div className="flex flex-col md:flex-row items-center justify-center w-full">
-        {/* Left: Illustration with Scroll Animation */}
+      {/* Content */}
+      <div className="flex flex-col md:flex-row items-center justify-between w-full gap-10">
+        {/* Left: Image */}
         <motion.div
           className="w-full md:w-1/2 flex justify-center"
           initial={{ x: -100, opacity: 0 }}
@@ -34,26 +35,26 @@ const WhyAutomate = () => {
           <motion.img
             src={home}
             alt="Why Automate"
-            className="w-80 md:w-96 "
+            className="w-96 md:w-[450px]"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
         </motion.div>
 
-        {/* Right: Text & Bullet Points */}
+        {/* Right: Text */}
         <motion.div
-          className="w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left"
+          className="w-full md:w-1/2 text-left"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 leading-snug">
             Your Business is Wasting Time & Money on Manual Work
           </h2>
 
-          {/* Key Stats Section */}
+          {/* Key Stats */}
           <motion.div
-            className="mt-3 space-y-3 text-gray-200"
+            className="mt-6 space-y-3 text-gray-700 leading-relaxed"
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={{
@@ -78,9 +79,9 @@ const WhyAutomate = () => {
             ))}
           </motion.div>
 
-          {/* Benefits List with Staggered Animation */}
+          {/* Benefits List */}
           <motion.ul
-            className="mt-6 space-y-2 text-gray-100"
+            className="mt-6 space-y-3 text-gray-700"
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             variants={{
@@ -102,20 +103,25 @@ const WhyAutomate = () => {
                 }}
                 transition={{ duration: 0.4 }}
               >
-                <CheckCircle size={20} className="text-[#00C4FF]" />
+                <CheckCircle size={24} className="text-[#FF8200]" />
                 <span className="text-lg">{benefit}</span>
               </motion.li>
             ))}
           </motion.ul>
 
-          {/* CTA Statement with Scale Effect */}
+          {/* CTA Statement */}
           <motion.p
-            className="mt-6 text-white font-semibold text-lg"
+            className="mt-8 text-[#FF8200] font-semibold text-lg"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={isInView ? { scale: 1, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            📢 Start Automating Now →
+            <Link
+             to="get-in-touch"
+             className="btn btn-lg !text-gray-900 mt-10 px-6 py-3 text-lg font-semibold bg-[#FF8200]  rounded-full shadow-md transition-all hover:shadow-lg"
+           >
+          Start Automating Now →
+            </Link>
           </motion.p>
         </motion.div>
       </div>

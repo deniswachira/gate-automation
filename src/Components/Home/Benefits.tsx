@@ -10,7 +10,7 @@ const Benefits = () => {
   return (
     <section
       ref={ref}
-      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 text-[#003F64]"
+      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 text-gray-900 font-[\'Maven Pro\']"
     >
       {/* Left Side: Benefits Description */}
       <motion.div
@@ -44,9 +44,9 @@ const Benefits = () => {
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <CheckCircle size={24} className="text-[#00C4FF]" />
-            <p className="text-lg font-semibold">
-              Reduce workload by <span className="font-bold text-[#004B80]">70%</span> – AI-powered automation takes over manual tasks.
+            <CheckCircle size={24} className="text-[#FF8200]" />
+            <p className="text-lg leading-relaxed">
+              Reduce workload by <span className="font-bold text-[#FF8200]">70%</span> – AI-powered automation takes over manual tasks.
             </p>
           </motion.div>
 
@@ -56,9 +56,9 @@ const Benefits = () => {
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <TrendingUp size={24} className="text-[#00C4FF]" />
-            <p className="text-lg font-semibold">
-              Increase productivity by <span className="font-bold text-[#004B80]">3x</span> – Faster workflows, better efficiency.
+            <TrendingUp size={24} className="text-[#FF8200]" />
+            <p className="text-lg leading-relaxed">
+              Increase productivity by <span className="font-bold text-[#FF8200]">3x</span> – Faster workflows, better efficiency.
             </p>
           </motion.div>
 
@@ -68,9 +68,9 @@ const Benefits = () => {
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <DollarSign size={24} className="text-[#00C4FF]" />
-            <p className="text-lg font-semibold">
-              Cut operational costs by <span className="font-bold text-[#004B80]">50%</span> – Reduce errors & eliminate redundancies.
+            <DollarSign size={24} className="text-[#FF8200]" />
+            <p className="text-lg leading-relaxed">
+              Cut operational costs by <span className="font-bold text-[#FF8200]">50%</span> – Reduce errors & eliminate redundancies.
             </p>
           </motion.div>
 
@@ -80,16 +80,16 @@ const Benefits = () => {
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <BarChart3 size={24} className="text-[#00C4FF]" />
-            <p className="text-lg font-semibold">
-              Leverage <span className="font-bold text-[#004B80]">data-driven insights</span> – Make informed decisions faster.
+            <BarChart3 size={24} className="text-[#FF8200]" />
+            <p className="text-lg leading-relaxed">
+              Leverage <span className="font-bold text-[#FF8200]">data-driven insights</span> – Make informed decisions faster.
             </p>
           </motion.div>
         </motion.div>
 
         {/* CTA Button */}
         <motion.button
-          className="mt-6 px-6 py-3 flex items-center bg-[#46aece] text-[#003F64] font-semibold rounded-lg cursor-pointer shadow-lg hover:bg-[#009ec2] transition-all"
+          className="mt-6 px-6 py-3 flex items-center !bg-[#FF8200] text-gray-900 font-semibold rounded-lg cursor-pointer shadow-lg hover:bg-[#009ec2] transition-all"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >

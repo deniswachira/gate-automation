@@ -16,15 +16,15 @@ const Footer = () => {
           <div className="flex items-center space-x-2">
             <img src={logo} alt="Gate Automation Logo" className="h-14" />
           </div>
-          <div className="flex items-center text-gray-600 space-x-2">
+          <div className="flex items-center text-gray-900 space-x-2">
             <MapPin size={18} className="text-[#00C4FF]" />
             <p className="text-sm">3616 Far West Blvd, STE 117 #103, Austin, TX 78731</p>
           </div>
-          <div className="flex items-center text-gray-600 space-x-2">
+          <div className="flex items-center text-gray-900 space-x-2">
             <Mail size={18} className="text-[#00C4FF]" />
             <p className="text-sm">info@gateautomation.com</p>
           </div>
-          <div className="flex items-center text-gray-600 space-x-2">
+          <div className="flex items-center text-gray-900 space-x-2">
             <Phone size={18} className="text-[#00C4FF]" />
             <p className="text-sm">888-992-4935</p>
           </div>
@@ -32,23 +32,23 @@ const Footer = () => {
 
         {/* Right Section: Links */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 md:mt-0 text-sm text-[#003F64] font-medium"
+          className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 md:mt-0 text-sm text-gray-900 font-medium"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex flex-col gap-2">
-            <a href="#" className="hover:text-[#00C4FF] transition duration-300">Services</a>
-            <a href="#" className="hover:text-[#00C4FF] transition duration-300">Why Gate</a>
-            <a href="#" className="hover:text-[#00C4FF] transition duration-300">Services</a>
+          <div className="flex flex-col gap-2 !text-gray-900">
+            <a href="#" className="hover:text-[#00C4FF] transition duration-300 !text-[#FF8200]">Services</a>
+            <a href="#" className="hover:text-[#00C4FF] transition duration-300 !text-[#FF8200]" >Why Gate</a>
+            <a href="#" className="hover:text-[#00C4FF] transition duration-300 !text-[#FF8200]">Services</a>
+          </div>
+          <div className="flex flex-col gap-2 !text-gray-900">
+            <a href="#" className="hover:text-[#FF8200] !text-[#FF8200]  transition duration-300">Solutions</a>
+            <a href="#" className="hover:text-[#00C4FF] !text-[#FF8200] transition duration-300">Pricing</a>
+            <a href="#" className="hover:text-[#00C4FF]  !text-[#FF8200] transition duration-300">About Us</a>
           </div>
           <div className="flex flex-col gap-2">
-            <a href="#" className="hover:text-[#00C4FF] transition duration-300">Solutions</a>
-            <a href="#" className="hover:text-[#00C4FF] transition duration-300">Pricing</a>
-            <a href="#" className="hover:text-[#00C4FF] transition duration-300">About Us</a>
-          </div>
-          <div className="flex flex-col gap-2">
-            <a href="#" className="font-semibold hover:text-[#00C4FF] transition duration-300">Pricing</a>
+            <a href="#" className="font-semibold hover:text-[#00C4FF] transition duration-300 !text-[#FF8200]">Pricing</a>
           </div>
         </motion.div>
       </div>

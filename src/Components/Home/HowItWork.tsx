@@ -10,7 +10,7 @@ const HowItWork = () => {
   return (
     <section
       ref={ref}
-      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16  text-[#003F64]"
+      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-8  text-gray-900 font-[\'Maven Pro \']"
     >
       {/* Left Side: Text & Process Steps */}
       <motion.div
@@ -50,17 +50,14 @@ const HowItWork = () => {
             },
           }}
         >
-          {/* Step 1: Identify Bottlenecks */}
           <motion.div
-            className="bg-[#004B80] p-4 rounded-lg shadow-md"
+            className="flex items-center space-x-3"
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="flex items-center text-lg font-semibold text-white">
-              <Settings size={20} className="mr-2 text-white" />
-              Step 1: Identify Bottlenecks
-            </h3>
-            <p className="text-sm mt-1 text-gray-300">
+            <Settings size={20} className="text-[#FF8200] " />
+            <p>
+              <span className="font-semibold font-[\'Maven Pro Black\']"> Step 1: Identify Bottlenecks</span><br />
               We analyze your current workflows to find inefficiencies that slow down your business.
             </p>
           </motion.div>
@@ -71,7 +68,7 @@ const HowItWork = () => {
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <Bolt size={20} className="text-[#00C4FF]" />
+            <Bolt size={20} className="text-[#FF8200]" />
             <p>
               <span className="font-semibold">Step 2: Build Custom Automations</span><br />
               AI-driven solutions tailored to your needs.
@@ -84,7 +81,7 @@ const HowItWork = () => {
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <Link size={20} className="text-[#00C4FF]" />
+            <Link size={20} className="text-[#FF8200]" />
             <p>
               <span className="font-semibold">Step 3: Connect & Integrate</span><br />
               Sync all your business tools effortlessly.
@@ -97,7 +94,7 @@ const HowItWork = () => {
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <TrendingUp size={20} className="text-[#00C4FF]" />
+            <TrendingUp size={20} className="text-[#FF8200]" />
             <p>
               <span className="font-semibold">Step 4: Scale with Ease</span><br />
               Optimize processes, reduce errors, and accelerate growth.
@@ -107,10 +104,11 @@ const HowItWork = () => {
 
         {/* CTA Button */}
         <motion.button
-          className="mt-6 px-6 py-3 flex items-center bg-[#46aece] text-[#003F64] font-semibold rounded-lg cursor-pointer shadow-lg hover:bg-[#009ec2] transition-all"
+          className="mt-6 px-6 py-3 flex items-center !bg-[#FF8200] !text-gray-900 font-semibold rounded-lg cursor-pointer shadow-lg hover:bg-[#009ec2] transition-all"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
+          
           See How It Works <ArrowRight size={20} className="ml-2" />
         </motion.button>
       </motion.div>

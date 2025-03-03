@@ -3,7 +3,7 @@ import logo from "../assets/logo/gate-automationNoBg.svg";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-base-200 px-4">
+    <nav className="navbar bg-base-200 px-4 font-['Maven Pro'] !text-gray-900">
       {/* Left: Logo & Mobile Menu */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -20,80 +20,72 @@ const Navbar = () => {
           </button>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-10"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-10 text-gray-900"
           >
             {/* Mobile Menu Links */}
-            <Link to="/" className="hover:text-[#00C4FF]">
+            <Link to="/" className="!text-gray-900">
               Home
             </Link>
-            <Link to="/services" className="hover:text-[#00C4FF]">
+            <Link to="/services" className="!text-gray-900">
               Services
             </Link>
-            <Link to="/why-gate" className="hover:text-[#00C4FF]">
+            <Link to="/why-gate" className="!text-gray-900">
               Why Gate
             </Link>
-            <Link to="/solutions" className="hover:text-[#00C4FF]">
+            <Link to="/solutions" className="!text-gray-900">
               Solutions
             </Link>
-            <Link to="/pricing" className="hover:text-[#00C4FF]">
+            <Link to="/pricing" className="!text-gray-900">
               Pricing
             </Link>
-            <Link to="/learn" className="hover:text-[#00C4FF]">
+            <Link to="/learn" className="!text-gray-900">
               Blogs
-            </Link>
-            <Link to="/videos" className="hover:text-[#00C4FF]">
-              Videos
-            </Link>
-            <Link to="/about-us" className="hover:text-[#00C4FF]">
+            </Link>            
+            <Link to="/about-us" className="!text-gray-900">
               About Us
             </Link>
           </ul>
         </div>
         <Link to="/">
-          <img src={logo} alt="Logo" className="h-15 " />
+          <img src={logo} alt="Logo" className="h-15" />
         </Link>
       </div>
 
       {/* Center: Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 text-lg">
-          <li >
-            <Link to="/" className="hover:text-[#00C4FF]">
+        <ul className="menu menu-horizontal px-1 text-lg !text-gray-900">
+          <li>
+            <Link to="/" className="!text-gray-900">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/services" className="hover:text-[#00C4FF]">
+            <Link to="/services" className="!text-gray-900">
               Services
             </Link>
           </li>
           <li>
-            <Link to="/why-gate" className="hover:text-[#00C4FF]">
+            <Link to="/why-gate" className="!text-gray-900">
               Why Gate
             </Link>
           </li>
           <li>
-            <Link to="/solutions" className="hover:text-[#00C4FF]">
+            <Link to="/solutions" className="!text-gray-900">
               Solutions
             </Link>
           </li>
           <li>
-            <Link to="/pricing" className="hover:text-[#00C4FF]">
+            <Link to="/pricing" className="!text-gray-900">
               Pricing
             </Link>
           </li>
           <li>
-            <Link to="/learn" className="hover:text-[#00C4FF]">
+            <Link to="/learn" className="!text-gray-900">
               Blogs
             </Link>
           </li>
           <li>
-            <Link to="/videos" className="hover:text-[#00C4FF]">
-              Videos
-            </Link>
-          </li>
-          <li>
-            <Link to="/about-us" className="hover:text-[#00C4FF]">
+            <Link to="/about-us" className="!text-gray-900">
               About Us
             </Link>
           </li>
@@ -102,12 +94,9 @@ const Navbar = () => {
 
       {/* Right: Buttons */}
       <div className="navbar-end">
-        {/* <Link to="login" className="font-medium hover:text-[#00C4FF] mr-4">
-          Login
-        </Link> */}
         <Link
           to="/get-in-touch"
-          className="bg-[#00C4FF] text-white font-medium px-6 py-2 rounded-full  text-center"
+          className="bg-[#FF8200] !text-gray-900 font-medium px-6 py-2 rounded-full text-center"
         >
           Get In Touch
         </Link>

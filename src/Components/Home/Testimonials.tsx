@@ -20,7 +20,7 @@ const Testimonials = () => {
   return (
     <section
       ref={ref}
-      className="px-6 md:px-20 py-16 text-[#F8FBFE]  bg-[#005A87] flex flex-col items-center"
+      className="px-6 md:px-20 py-16 text-[#F8FBFE]  flex flex-col items-center"
     >
       {/* Section Title */}
       <motion.h2
@@ -48,12 +48,12 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-white shadow-lg rounded-lg border-l-4 border-[#00C4FF] flex flex-col"
+            className="p-6  shadow-lg rounded-lg border-l-4 border-[#FF8200] flex flex-col"
             variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0 } }}
             transition={{ duration: 0.6 }}
           >
-            <Quote size={32} className="text-[#00C4FF]" />
-            <p className="mt-3 text-lg font-medium text-[#004B80]">"{testimonial.text}"</p>
+            <Quote size={32} className="text-[#FF8200]" />
+            <p className="mt-3 text-lg font-medium text-gray-900">"{testimonial.text}"</p>
             <div className="mt-4 flex items-center space-x-2">
               <Star size={16} className="text-[#FFD700]" />
               <Star size={16} className="text-[#FFD700]" />
@@ -61,14 +61,14 @@ const Testimonials = () => {
               <Star size={16} className="text-[#FFD700]" />
               <Star size={16} className="text-[#FFD700]" />
             </div>
-            <p className="mt-2 text-sm font-semibold text-gray-600">{testimonial.author}</p>
+            <p className="mt-2 text-sm font-semibold text-gray-700">{testimonial.author}</p>
           </motion.div>
         ))}
       </motion.div>
 
       {/* CTA Button */}
       <motion.button
-        className="mt-8 px-6 py-3 flex items-center bg-[#46aece] text-[#003F64] font-semibold rounded-lg cursor-pointer shadow-lg hover:bg-[#009ec2] transition-all"
+        className="mt-8 px-6 py-3 flex items-center !bg-[#FF8200] text-gray-900 font-semibold rounded-lg cursor-pointer shadow-lg hover:bg-[#009ec2] transition-all"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >

@@ -1,5 +1,5 @@
-// import Companies from "../Components/Companies"
-import Container from "../Components/Container"
+
+// import Container from "../Components/Container"
 import Footer from "../Components/Footer"
 import Hero from "../Components/Home/Hero"
 import Navbar from "../Components/Navbar"
@@ -11,7 +11,8 @@ import Testimonials from "../Components/Home/Testimonials"
 
 const Home = () => {
   return (
-      <Container className="flex flex-col gap-6">
+      // <Container className="flex flex-col gap-6">
+      <>
         <Navbar />
         <Hero />
         <WhyAutomate />
@@ -20,7 +21,8 @@ const Home = () => {
         <Benefits />
         <Testimonials />
         <Footer />
-      </Container>    
+      </>
+      // </Container>    
   )
 }
 

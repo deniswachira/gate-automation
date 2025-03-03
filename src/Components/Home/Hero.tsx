@@ -20,8 +20,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center py-16 px-6">
-      <div className="grid md:grid-cols-2 items-center gap-10 max-w-6xl">
+    <div className="flex justify-center items-center py-10 px-10 w-full bg-gray-50">
+      <div className="grid md:grid-cols-2 items-center gap-8 max-w-7xl w-full">
         {/* Left: Text Section */}
         <motion.div
           className="text-left"
@@ -29,37 +29,37 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          {/* Main Title with Fade-in Animation */}
+          {/* Main Title */}
           <motion.h1
-            className="text-4xl font-bold text-[#003F64] leading-tight"
+            className="text-5xl font-extrabold text-gray-900 leading-snug font-[\'Maven Pro\']"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            Work Smarter, Scale Faster. Automate Everything.
+            Work Smarter, Scale Faster.<br /> Automate Everything.
           </motion.h1>
 
           {/* Dynamic Changing Text */}
-          <div className="relative overflow-hidden h-14 w-fit mt-3">
-            <motion.h1
+          <div className="relative overflow-hidden h-14 w-fit mt-4">
+            <motion.h2
               key={index}
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="text-xl font-bold text-white bg-[#003F64] px-4 py-1 rounded-md inline-block shadow-lg"
+              className="text-2xl font-semibold text-[#FF8200] font-[\'Maven Pro\']"
             >
               {textOptions[index]}
-            </motion.h1>
+            </motion.h2>
           </div>
 
           {/* Description */}
-          <p className="text-2xl font-semibold text-[#003F64] mt-2 mb-7">
+          <p className="text-xl font-medium text-gray-700 mt-3 mb-8 leading-relaxed font-[\'Maven Pro\']">
             Your business is losing <strong>1000+ hours</strong> yearly on manual workflows, disconnected systems, and
             repetitive tasks. It's time to eliminate inefficiencies and focus on growth with AI-powered automation.
           </p>
 
-          {/* CTA Button with Hover Animation */}
+          {/* CTA Button */}
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -67,9 +67,9 @@ export default function Hero() {
           >
             <Link
               to="get-in-touch"
-              className="mt-10 px-6 py-3 text-lg font-semibold bg-[#00C4FF] rounded-full shadow-md transition-all hover:shadow-lg"
+              className="btn btn-lg !text-gray-900 mt-10 px-6 py-3 text-lg font-semibold bg-[#FF8200]  rounded-full shadow-md transition-all hover:shadow-lg"
             >
-              Get Started Today 🚀
+              Get Started Today 
             </Link>
           </motion.div>
         </motion.div>
@@ -80,7 +80,7 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img src={heroImg} className="max-w-sm rounded-lg drop-shadow-lg" alt="Hero" />
+          <img src={heroImg} className="max-w-md rounded-lg drop-shadow-lg" alt="Hero" />
         </motion.div>
       </div>
     </div>
