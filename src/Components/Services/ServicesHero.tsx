@@ -18,7 +18,7 @@ const ServicesHero = () => {
   return (
     <motion.section
       ref={ref}
-      className="relative py-10 bg-gradient-to-b from-[#F8FBFE] to-white"
+      className="relative py-10 bg-gray-50"
     >
       <motion.div
         className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"

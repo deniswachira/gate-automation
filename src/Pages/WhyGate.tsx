@@ -6,7 +6,7 @@ import WhyGateHero from "../Components/WhyGate/WhyGateHero"
 
 const WhyGate = () => {
   return (
-    <Container className="flex flex-col gap-2">
+    <Container className="flex flex-col gap-2 bg-gray-50">
       <Navbar />
       <WhyGateHero />
       <WhyGateFlow />

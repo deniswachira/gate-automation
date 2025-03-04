@@ -13,7 +13,7 @@ const Learn = () => {
   const navigate = useNavigate();
 
   return (
-    <Container className="flex flex-col gap-4">
+    <Container className="flex flex-col gap-4 bg-gray-50">
       <Navbar />
       <div className="container mx-auto p-4">
         {/* Title */}

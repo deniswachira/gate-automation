@@ -20,7 +20,7 @@ const Testimonials = () => {
   return (
     <section
       ref={ref}
-      className="px-6 md:px-20 py-16 text-[#F8FBFE]  flex flex-col items-center"
+      className="px-6 md:px-20 py-16 text-[#F8FBFE]  flex flex-col items-center bg-gray-50"
     >
       {/* Section Title */}
       <motion.h2

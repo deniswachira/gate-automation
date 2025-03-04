@@ -11,7 +11,7 @@ const WhyAutomate = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col items-center justify-center px-6 md:px-32 py-8"
+      className="flex flex-col items-center justify-center px-6 md:px-32 py-8 bg-gray-50"
     >
       {/* Title */}
       <motion.h1
@@ -90,9 +90,9 @@ const WhyAutomate = () => {
             }}
           >
             {[
-              "Eliminate manual tasks – Let AI handle the busywork",
-              "Optimize operations – Automate workflows across all platforms",
-              "Scale without limits – Work smarter, not harder",
+              "Eliminate manual tasks - Let AI handle the busywork",
+              "Optimize operations - Automate workflows across all platforms",
+              "Scale without limits - Work smarter, not harder",
             ].map((benefit, index) => (
               <motion.li
                 key={index}

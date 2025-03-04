@@ -10,7 +10,7 @@ const HowItWork = () => {
   return (
     <section
       ref={ref}
-      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-8  text-gray-900 font-[\'Maven Pro \']"
+      className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-8  text-gray-900 font-[\'Maven Pro \'] bg-gray-50"
     >
       {/* Left Side: Text & Process Steps */}
       <motion.div

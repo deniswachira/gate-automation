@@ -11,7 +11,7 @@ import Mission from "../Components/AboutUs/Mission";
 
 export default function AboutUs() {
   return (
-    <Container className="flex flex-col gap-6">
+    <Container className="flex flex-col gap-6 bg-gray-50">
         <Navbar />
         <AboutHero />
         <WhatWeDo />

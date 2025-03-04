@@ -22,7 +22,7 @@ const FeaturesAndSolutions = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col items-center justify-center px-6 md:px-20 py-10  text-gray-900"
+      className="flex flex-col items-center justify-center px-6 md:px-20 py-10  text-gray-900 bg-gray-50"
     >
       {/* Section Header */}
       <motion.h1

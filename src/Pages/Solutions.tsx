@@ -10,7 +10,7 @@ import SolutionHero5 from "../Components/Solutions/SolutionHero5"
 
 const Solutions = () => {
   return (
-      <Container className="flex flex-col gap-6">
+      <Container className="flex flex-col gap-6 bg-gray-50">
         <Navbar />
         <SolutionHero1 />
         <SolutionHero2 />
